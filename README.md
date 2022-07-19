@@ -129,20 +129,16 @@ console.log(det.getDetails());
 4.write a class to calculate the uber price.
 
 var baseFee = .44
-var cities = ["Providence", "Boston", "New York", ]
+var cities = ["Providence","Boston","Newyork"];
 var uberRates = [5, 10, 15]
-var customerName = "Wendy" 
-let customerCity = "Providence" 
+var customerName = prompt("What is your name?") 
+var customerCity = prompt("What is your city?") 
 console.log("Hello", customerName+ ", welcome to the Uber Rate Program")
 function getRate(customerCity) {
-  //uberRate function that will calculate the rate based on customerCity and index
-  function uberRate(customerCity, index) {
-    //calculate the final rate
-    let finalRate = (uberRates[index]) * baseFee
-    return finalRate
+  function uberRate(customerCity, index) { 
+    var finalRate = (uberRates[index]) * baseFee
+    return finalRate 
   }
-  //log to the console customerCity and the finalRate after calling function uberRate and passing customerCity and index as parameters
-  console.log(customerCity, "rate is:", uberRate(customerCity, cities.indexOf(customerCity)))
+  console.log(customerCity, "rate is:", uberRate(customerCity, cities.indexOf(customerCity))) 
 }
-//call the getRate function passing in the customerCity arugment
 getRate(customerCity)
